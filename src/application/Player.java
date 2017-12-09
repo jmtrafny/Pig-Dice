@@ -9,6 +9,8 @@ public class Player {
 	private int coins;
 	private int bank;
 	private int ordinal;
+	private int otherPlayerOrdinal;
+	private int bet;
 	
 	public Player(String _name, int _ordinal){
 		super();
@@ -17,6 +19,15 @@ public class Player {
 		coins = 100;
 		bank = 0;
 		ordinal = _ordinal;
+		if (ordinal == 1){
+			otherPlayerOrdinal = 2;
+		} else {
+			otherPlayerOrdinal = 1;
+		}
+	}
+	
+	public int getOtherPlayerOrdinal(){
+		return otherPlayerOrdinal;
 	}
 	
 	public int getOrdinal(){
@@ -26,6 +37,15 @@ public class Player {
 	public int setOrdinal(int _ordinal){
 		ordinal = _ordinal;
 		return ordinal;
+	}
+	
+	public int getBet(){
+		return bet;
+	}
+	
+	public int setBet(int _bet){
+		bet = _bet;
+		return bet;
 	}
 	
 	public String getName(){

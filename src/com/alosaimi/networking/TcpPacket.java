@@ -1,4 +1,4 @@
-package application;
+package com.alosaimi.networking;
 
 
 public class TcpPacket implements java.io.Serializable

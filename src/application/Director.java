@@ -59,6 +59,11 @@ public class Director {
 	public void setPot(int pot) {
 		this.pot = pot;
 	}
+	
+	public void setResult(int d1, int d2){
+		d1_Result = d1;
+		d2_Result = d2;
+	}
 
 	public void rollDice() {
 		Random rand;
