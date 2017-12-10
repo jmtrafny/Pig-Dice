@@ -9,19 +9,14 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
 import java.util.ResourceBundle;
-
 import com.alosaimi.networking.TcpPacket;
-
 import javafx.animation.KeyFrame;
 import javafx.animation.RotateTransition;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
-import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -139,6 +134,7 @@ public class GameController implements Initializable {
 				}
 			
 				// Create server socket
+				@SuppressWarnings("resource")
 				ServerSocket server = new ServerSocket(PORT);
 				socket = server.accept();
 				
